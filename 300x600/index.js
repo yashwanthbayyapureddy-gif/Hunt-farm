@@ -25,16 +25,16 @@ lib.ssMetadata = [];
 
 
 
-(lib._300x600_logo = function() {
-	this.initialize(img._300x600_logo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,979,942);
-
-
 (lib.image = function() {
 	this.initialize(img.image);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,300,282);
+
+
+(lib.logo = function() {
+	this.initialize(img.logo);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,979,942);
 
 
 (lib.text6 = function(mode,startPosition,loop,reversed) {
@@ -1305,7 +1305,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-48,-101.1,96,202.3);
 
 
-(lib.logo = function(mode,startPosition,loop,reversed) {
+(lib.logo_1 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -1317,8 +1317,8 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib._300x600_logo();
-	this.instance.setTransform(-50,-48,0.1014,0.1014);
+	this.instance = new lib.logo();
+	this.instance.setTransform(-50,-48,1.0141,1.0141);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1714,7 +1714,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(335));
 
 	// logo
-	this.instance = new lib.logo("synched",0);
+	this.instance = new lib.logo_1("synched",0);
 	this.instance.setTransform(150,27.5);
 	this.instance.alpha = 0.1406;
 
@@ -1813,8 +1813,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"_300x600_logo.png", id:"_300x600_logo"},
-		{src:"image.png", id:"image"}
+		{src:"image.png", id:"image"},
+		{src:"logo.png", id:"logo"}
 	],
 	preloads: []
 };
